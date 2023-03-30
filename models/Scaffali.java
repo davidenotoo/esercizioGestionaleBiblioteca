@@ -1,4 +1,4 @@
-package Biblioteca.models;
+package esercizioGestionaleBiblioteca.models;
 
 public class Scaffali {
 }

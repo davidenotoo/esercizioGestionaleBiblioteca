@@ -1,13 +1,16 @@
-package Biblioteca.models;
+package esercizioGestionaleBiblioteca.models;
 
 public class Cliente {
     private String nomeCliente;
     private String cognomeCliente;
     private Integer etaCliente;
     private boolean accessoEta;
+    private String codiceUnivoco;
+    private Integer numeroLibriDaRestituire;
+    private Integer storicoLibri;
+
 
     public Cliente() {
-        attivatoreContenuti();
     }
 
     public String getNomeCliente() {
@@ -50,8 +53,36 @@ public class Cliente {
         }
     }
 
+    public String getCodiceUnivoco() {
+        return codiceUnivoco;
+    }
+
+    public void setCodiceUnivoco(String codiceUnivoco) {
+        this.codiceUnivoco = codiceUnivoco;
+    }
+
+    public boolean isAccessoEta() {
+        return accessoEta;
+    }
+
+    public Integer getNumeroLibriDaRestituire() {
+        return numeroLibriDaRestituire;
+    }
+
+    public void setNumeroLibriDaRestituire(Integer numeroLibriDaRestituire) {
+        this.numeroLibriDaRestituire = numeroLibriDaRestituire;
+    }
+
+    public Integer getStoricoLibri() {
+        return storicoLibri;
+    }
+
+    public void setStoricoLibri(Integer storicoLibri) {
+        this.storicoLibri = storicoLibri;
+    }
+
     @Override
     public String toString() {
-        return nomeCliente + " " + cognomeCliente + " " + etaCliente + " anni" ;
+        return "\uD83E\uDDD1\uD83C\uDFFD   " + nomeCliente + " " + cognomeCliente + "\n🎂   " + etaCliente + " anni\n" + "\uD83D\uDCB3   Codice CARD: " + codiceUnivoco + "\nn° libri da restituire: " + numeroLibriDaRestituire + " ";
     }
 }

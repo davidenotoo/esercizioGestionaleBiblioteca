@@ -1,4 +1,4 @@
-package Biblioteca;
+package esercizioGestionaleBiblioteca;
 
 public class Biblioteca {
 
