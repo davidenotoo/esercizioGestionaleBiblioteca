@@ -7,7 +7,6 @@ public class ListaClienti {
     private static List<Cliente> listaClienti = new ArrayList<>();
 
     public ListaClienti() {
-
     }
     public static List<Cliente> aggiungiCliente(Cliente cliente){
         listaClienti.add(cliente);

@@ -3,6 +3,7 @@ package esercizioGestionaleBiblioteca;
 import esercizioGestionaleBiblioteca.models.Cliente;
 import esercizioGestionaleBiblioteca.models.GeneratoreDiCodici;
 import esercizioGestionaleBiblioteca.models.ListaClienti;
+import esercizioGestionaleBiblioteca.models.Scaffali;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +12,15 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         List<Cliente> listaCard = new ArrayList<>();
-        bibliotecaEXE();
+        Biblioteca.biblioTOT();
+//        bibliotecaEXE();
+        System.out.println(Scaffali.getScaffale());
     }
 
     public static void bibliotecaEXE() {
         Scanner input = new Scanner(System.in);
         boolean running = true;
+
         while (running) {
 
             System.out.println("\n\nBenvenuto, hai già una Tessera Clienti?");
@@ -32,7 +36,8 @@ public class main {
                     break;
                 // caso in cui si deve generare una card
                 case 2:
-                    Cliente cardato =generaCard(input);
+                    generaCard(input);
+
                     break;
 
                 // codice segreto per vedere la lista
@@ -91,7 +96,7 @@ public class main {
         String codiceInserito = input.next();
         for (int i = 0; i < ListaClienti.getListaClienti().size(); i++) {
             if (codiceInserito.equals(cliente.getCodiceUnivoco())) {
-                System.out.println("Benvenuto " + ListaClienti.getListaClienti().get(i));
+                System.out.println("Benvenuto " + ListaClienti.getListaClienti());
                 return cliente;
             }
         }
